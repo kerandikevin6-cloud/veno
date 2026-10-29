@@ -1,5 +1,5 @@
 /* ============================================================
-   NexasFive, shell
+   VenoBinary, shell
    Injects the chrome (top bar, drawer, tab bar), owns the modal
    engine, theme, session guard, connection banner and consent
    surfaces. Page-specific logic lives in trade.js / positions.js.
@@ -595,15 +595,15 @@
   /* The name, in two lines, with a monogram beside it. One place, so
      the bar and the sign-in pages cannot drift apart.
 
-     aria-label carries the whole name: a screen reader reading "NEXAS
-     FIVE" off three separate elements is not the name of anything. */
+     aria-label carries the whole name: a screen reader reading "VENO
+     BINARY" off three separate elements is not the name of anything. */
   function wordmark(to) {
-    return '<a class="wordmark" href="' + to + '" aria-label="NexasFive">' +
+    return '<a class="wordmark" href="' + to + '" aria-label="VenoBinary">' +
       '<svg class="wm-mark" viewBox="0 0 64 64" aria-hidden="true">' +
         '<path d="M12 43L24 31L32 38L47 21" fill="none" stroke="currentColor" stroke-width="5.2" stroke-linecap="square"/>' +
         '<rect x="44" y="14" width="9" height="9" fill="var(--accent-fill)"/>' +
       '</svg>' +
-      '<span class="wm-name" aria-hidden="true"><b>Nexas</b><i>Five</i></span>' +
+      '<span class="wm-name" aria-hidden="true"><b>Veno</b><i>Binary</i></span>' +
     '</a>';
   }
   window.NexWordmark = wordmark;
@@ -971,8 +971,8 @@
   function shareLink(url) {
     if (navigator.share) {
       navigator.share({
-        title: 'NexasFive',
-        text: 'I trade synthetic indices on NexasFive. Join with my link.',
+        title: 'VenoBinary',
+        text: 'I trade synthetic indices on VenoBinary. Join with my link.',
         url: url
       }).catch(function () {});
       return;
@@ -1157,7 +1157,7 @@
     var v = document.createElement('div');
     v.className = 'boot';
     v.id = 'bootVeil';
-    v.innerHTML = '<div class="boot-word">NexasFive</div>' + loader() +
+    v.innerHTML = '<div class="boot-word">VenoBinary</div>' + loader() +
       '<span>Connecting to the feed</span>';
     document.body.appendChild(v);
   }
@@ -1319,7 +1319,7 @@
     el.className = 'splash';
     el.innerHTML = '<div class="splash-inner">' +
       '<div class="pulse"><i></i><i></i><i></i></div>' +
-      '<div class="splash-word">NexasFive</div>' +
+      '<div class="splash-word">VenoBinary</div>' +
       '<div class="splash-msg" role="status">' + message + '</div></div>';
     document.body.appendChild(el);
     requestAnimationFrame(function () { el.classList.add('open'); });
@@ -2772,7 +2772,7 @@
         '</div>' +
         '<p class="ticket-said">' + escapeHtml(t.body) + '</p>' +
         (t.reply
-          ? '<div class="ticket-reply"><b>NexasFive support</b><p>' + escapeHtml(t.reply) + '</p></div>'
+          ? '<div class="ticket-reply"><b>VenoBinary support</b><p>' + escapeHtml(t.reply) + '</p></div>'
           : '<div class="ticket-wait">We usually come back within 30 minutes.</div>') +
         '<div class="ticket-when">' + when + '</div>' +
       '</div>';

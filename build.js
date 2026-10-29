@@ -26,7 +26,7 @@ for (const name of PAGES) {
   bodyTag.replace(/(data-[\w-]+)="([^"]*)"/g, (_, k, v) => { attrs[k] = v; return ''; });
 
   const main = src.match(/<main>([\s\S]*?)<\/main>/i);
-  const title = (src.match(/<title>([^<]*)<\/title>/i) || [, 'NexasFive'])[1];
+  const title = (src.match(/<title>([^<]*)<\/title>/i) || [, 'VenoBinary'])[1];
 
   // inline page-specific scripts (those without a src)
   const inline = [...src.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]).join('\n');
@@ -44,7 +44,7 @@ for (const name of PAGES) {
    not be there. */
 const favicon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAABRUlEQVR4nOyWvWrCUBTHz7UOFUpa5+YF6tilKS30IdpiqHNLpyI0+A4tgaY+g1/gx6Lo4CQoRmfRyS2bm25OHrxwiSbeXKJO3v8QTu49+f1vzjmEROPxKzimInBkSYMTMIjC3rqu51g8L9QWxZp7V/ZA0+74CWex2DmElaqqrWYDCLm9uJy22rPeEBeXo4k7h4T+FiG91+3Q2LKyf9a/b1r4KTLNHxqUK9VddBDpQamUZyd1L95rGgZ92zaMDOfxSCAdQbQaePXSdT3FJ/B6wEBUjuMk9dTry3M6/UVvHx6fIEg7DdzHHNhDBqXvgcG3kcEdCJL/mG4VAUEECI68oig04f3jU4Tub+BbYuaBcVJ/E6SDt0T8BmIDYD2XIKwNA9P8pQiR8RDURonG40kicYMNPBQdvCXCIUEDOJyI/C+SBtIAVgAAAP//2fHeOwAAAAZJREFUAwCAfIRfoutdSwAAAABJRU5ErkJggg==';
 
-const out = `<title>NexasFive Terminal</title>
+const out = `<title>VenoBinary Terminal</title>
 <link rel="icon" type="image/png" href="${favicon}">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">

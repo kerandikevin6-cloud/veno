@@ -1,6 +1,6 @@
 {
-  "name": "NexasFive Terminal",
-  "short_name": "NexasFive",
+  "name": "VenoBinary Terminal",
+  "short_name": "VenoBinary",
   "description": "Trade synthetic indices from your phone.",
   "start_url": "index.html",
   "scope": ".",
